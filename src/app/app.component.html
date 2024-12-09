@@ -1,4 +1,6 @@
-<section>
-    <app-navigation [items]="navigationItems" />
-    <router-outlet />
+<section class="main-app">
+    <app-navigation [items]="navItems" />
+    <div class="main-app-content" [ngClass]="{'up': countService.count >= 10, 'down': countService.count <= -10}">
+        <router-outlet />
+    </div>
 </section>

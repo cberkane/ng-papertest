@@ -10,7 +10,7 @@ import { NavigationComponent,  NavigationItem } from './components/navigation/na
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  navigationItems: NavigationItem[] = [
+  navItems: NavigationItem[] = [
     { title: 'Up', link: 'up' },
     { title: 'Down', link: 'down' },
     { title: 'Reset', link: 'reset' },

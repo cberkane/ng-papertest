@@ -1,0 +1,16 @@
+.main-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .main-app-content {
+        flex-grow: 1;
+        background-color: #f1f1f1;
+        &.up {
+            background-color: #e74c3c;
+        }
+        &.down {
+            background-color: #27ae60;
+        }
+    }
+}
