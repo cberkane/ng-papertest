@@ -1,0 +1,31 @@
+.app-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    height: 52px;
+    border-bottom: 1px solid #212121;
+
+    .app-navigation-brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    .app-navigation-items {
+        display: flex;
+        gap: 16px;
+
+        li {
+            cursor: pointer;
+            &.active {
+                color: blueviolet;
+            }
+        }
+    }
+}

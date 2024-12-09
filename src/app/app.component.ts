@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavigationComponent,  NavigationItem } from './components/navigation/navigation.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavigationComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'ng-papernest';
+  navigationItems: NavigationItem[] = [
+    { title: 'Up', link: 'up' },
+    { title: 'Down', link: 'down' },
+    { title: 'Reset', link: 'reset' },
+  ];
 }

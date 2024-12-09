@@ -1,0 +1,17 @@
+.app-counter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 240px;
+
+    .app-counter-count {
+        font-size: 44px;
+        text-align: center;
+    }
+
+    .app-counter-button {
+        cursor: pointer;
+        width: fit-content;
+        margin: auto;
+    }
+}

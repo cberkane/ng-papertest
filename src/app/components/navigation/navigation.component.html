@@ -1,0 +1,11 @@
+<nav class="app-navigation">
+    <div class="app-navigation-brand">
+        <img src="/assets/svg/angular.svg" />
+        <p>Ng technical test</p>
+    </div>
+    <ul class="app-navigation-items">
+        @for (item of items; track $index) {
+            <li [routerLink]="item.link" routerLinkActive="active">{{ item.title }}</li>
+        }
+    </ul>
+</nav>
