@@ -1,3 +1,5 @@
-<app-counter [count]="0">
-    <span button-title>Increment</span>
-</app-counter>
+<section class="page page-down">
+    <app-counter [count]="countService.count" (onCount)="increment()">
+        <span button-title>Increment</span>
+    </app-counter>
+</section>
