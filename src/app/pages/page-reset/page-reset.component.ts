@@ -17,6 +17,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { CountService } from '../../services/count.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -30,6 +31,7 @@ import { CountService } from '../../services/count.service';
     MatButtonModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    AsyncPipe,
   ],
   providers: [
     provideNativeDateAdapter(),

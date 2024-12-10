@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgClass } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 
 import { NavigationComponent, NavigationItem } from './components/navigation/navigation.component';
 import { CountService } from './services/count.service';
@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
     NavigationComponent,
     NgClass,
     MatIconModule,
+    AsyncPipe,
   ],
 })
 export class AppComponent {

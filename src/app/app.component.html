@@ -1,9 +1,12 @@
+@let count = (countService.getCount$() | async) ?? 0;
+@let actionCount = (countService.getActionCount$() | async) ?? 0;
+
 <section class="main-app">
     <app-navigation [items]="navItems" />
-    <div class="app-container" [ngClass]="{'up': countService.count >= 10, 'down': countService.count <= -10}">
+    <div class="app-container" [ngClass]="{'up': count >= 10, 'down': count <= -10}">
         <p class="hint small">
             <mat-icon fontIcon="info"/>
-            Vous avez cliqué {{ countService.actionCount }} fois
+            Vous avez cliqué {{ actionCount }} fois
         </p>
         <router-outlet />
     </div>

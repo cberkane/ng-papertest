@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { CounterComponent } from "../../components/counter/counter.component";
 import { CountService } from '../../services/count.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-page-up',
   standalone: true,
-  imports: [CounterComponent],
+  selector: 'app-page-up',
   templateUrl: './page-up.component.html',
-  styleUrl: './page-up.component.scss'
+  styleUrl: './page-up.component.scss',
+  imports: [
+    CounterComponent,
+    AsyncPipe,
+  ],
 })
 export class PageUpComponent {
 

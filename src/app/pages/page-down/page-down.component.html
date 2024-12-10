@@ -1,5 +1,7 @@
+@let count = (countService.getCount$() | async) ?? 0;
+
 <section class="page page-down">
-    <app-counter [count]="countService.count" (onCount)="decrement()">
+    <app-counter [count]="count" (onCount)="decrement()">
         <span button-title>Décrementer</span>
     </app-counter>
 </section>
