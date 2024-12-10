@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import {
   MAT_DATE_LOCALE,
   provideNativeDateAdapter,
@@ -28,17 +29,20 @@ import { CountService } from '../../services/count.service';
     MatDatepickerModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [
     provideNativeDateAdapter(),
     { provide: MAT_DATE_LOCALE, useValue: 'fr-FR' },
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageResetComponent implements OnInit {
   birthDateForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
+    private snackBar: MatSnackBar, 
     public countService: CountService
   ) {}
 
@@ -55,7 +59,12 @@ export class PageResetComponent implements OnInit {
   onSubmit(): void {
     const value = this.birthDateForm.controls['birthDate'].value;
     const isAdult = this.isAdult(value);
-    if (isAdult) this.countService.reset();
+    if (isAdult) {
+      this.countService.reset();
+      this.toggleSnackbar('Vous êtes adulte, le compte est remis à 0');
+    } else {
+      this.toggleSnackbar('Vous n\'êtes pas adulte, le compte est maintenu');
+    }
   }
 
   private isAdult(value: string): boolean {
@@ -75,5 +84,16 @@ export class PageResetComponent implements OnInit {
       age--;
 
     return age >= 18;
+  }
+
+  private toggleSnackbar(message: string): void {
+    this.snackBar.open(
+      message,
+      'Fermer',
+      {
+        duration: 5000,
+        horizontalPosition: 'right'
+      }
+    );
   }
 }

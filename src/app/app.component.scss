@@ -16,7 +16,14 @@
             background-color: $green;
         }
         .hint {
+            display: flex;
+            align-items: center;
             margin: 24px 0 0 24px;
+
+            mat-icon {
+                scale: 0.7;
+                color: #7b7b7b;
+            }
         }
     }
 }

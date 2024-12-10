@@ -8,14 +8,15 @@
 [x] Add count hint
 [x] Nice to have : refactor css into variables
 [x] Delete titles
+[x] Deactivate form if count === 0
+[x] Nice to have : add users feedback
+[x] Add info icon to hint to hint
 [] Have state derived from observables
-[] Deactivate form if count === 0
 [] Add window titles
 [] Add documentation whenever it is needed
 [] Make sure there is no error in the console
 [] Nice to have : add not found page
 [] Nice to have : improve imports if needed + add import alias
-[] Nice to have : add users feedback
 [] Nice to have : Sort component decorators
-[] Add info icon to hint to hint
+[] Nice to have : fix paddings
 [] Improve navbar transition

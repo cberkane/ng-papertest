@@ -1,7 +1,10 @@
 <section class="main-app">
     <app-navigation [items]="navItems" />
     <div class="app-container" [ngClass]="{'up': countService.count >= 10, 'down': countService.count <= -10}">
-        <p class="hint small">Vous avez cliqué {{ countService.actionCount }} fois</p>
+        <p class="hint small">
+            <mat-icon fontIcon="info"/>
+            Vous avez cliqué {{ countService.actionCount }} fois
+        </p>
         <router-outlet />
     </div>
 </section>
