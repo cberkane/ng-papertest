@@ -1,0 +1,30 @@
+@import "./../../../variables.scss";
+
+.page-reset {
+    .reset-content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: fit-content;
+        margin: 0 auto;
+        border: 1px solid $theme-primary;
+        border-radius: 6px;
+        padding: 24px;
+        box-shadow: $boxShadow;
+
+        .reset-header {
+            text-align: center;
+            .info {
+                font-size: 6rem;
+                font-weight: 500;
+            }
+        }
+
+        .reset-form {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            gap: 18px;
+        }
+    }
+}

@@ -5,14 +5,18 @@
     flex-direction: column;
     min-height: 100vh;
 
-    .main-app-content {
+    .app-container {
         min-height: calc(100vh - $nav-height);
         background-color: $surface;
+
         &.up {
             background-color: $red;
         }
         &.down {
             background-color: $green;
+        }
+        .hint {
+            margin: 24px 0 0 24px;
         }
     }
 }

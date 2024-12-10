@@ -3,15 +3,15 @@
 .app-counter {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 18px;
     padding: 24px;
     border: 1px solid $theme-primary;
     background-color: $surface;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: $boxShadow;
 
     .app-counter-count {
-        font-size: 44px;
+        font-size: 6rem;
         text-align: center;
     }
 

@@ -8,7 +8,7 @@ export class CountService {
   private readonly countKey: string = 'count';
 
   x: number = 1;
-  private actionCount: number = 0;
+  actionCount: number = 0;
 
   constructor() {
     this.initCount();
