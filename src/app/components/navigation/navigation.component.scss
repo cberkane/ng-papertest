@@ -1,9 +1,11 @@
+@import "./../../../variables.scss";
+
 .app-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    height: 62px;
+    height: $nav-height;
 
     .app-navigation-brand {
         display: flex;
@@ -23,8 +25,8 @@
             width: 45px;
             text-align: center;
             &.active {
-                color: blueviolet;
-                border-bottom: 2px solid blueviolet;
+                color: $theme-primary;
+                border-bottom: 2px solid $theme-primary;
             }
         }
     }

@@ -2,7 +2,7 @@
     <div class="app-counter-count">
         {{ count }}
     </div>
-    <button class="app-counter-button" (click)="onCount.emit()">
+    <button class="app-counter-button btn outlined" (click)="onCount.emit()">
         <ng-content select="[button-title]"></ng-content>
     </button>
 </div>

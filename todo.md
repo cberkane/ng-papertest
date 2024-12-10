@@ -4,8 +4,9 @@
 [x] Add counter component
 [x] Add background modification
 [x] Add x factor for each 30 actions
-[] Nice to have: have state shared with observables
+[] Nice to have: have state derived from observables
 [] Add `birthdate` input and `reset()` logic  
+[] Add count hint
 [] Add window titles
 [] Add documentation whenever it is needed
 [] Make sure there is no error in the console
