@@ -28,13 +28,14 @@ $ng-papernest-theme: mat.define-theme(
     @include mat.button-overrides(
         (
             container-shape: 6px,
-            outline-color: blueviolet,
+            outline-color: $theme-primary,
         )
     );
     @include mat.snack-bar-overrides(
         (
             container-color: $surface,
             supporting-text-color: $font-primary,
+            button-color: $theme-primary,
         )
     );
 }

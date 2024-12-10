@@ -38,11 +38,13 @@ import { CountService } from '../../services/count.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageResetComponent implements OnInit {
+
   birthDateForm: FormGroup;
+  today = new Date();
 
   constructor(
     private fb: FormBuilder,
-    private snackBar: MatSnackBar, 
+    private snackBar: MatSnackBar,
     public countService: CountService
   ) {}
 
@@ -61,39 +63,33 @@ export class PageResetComponent implements OnInit {
     const isAdult = this.isAdult(value);
     if (isAdult) {
       this.countService.reset();
+      this.birthDateForm.reset();
       this.toggleSnackbar('Vous êtes adulte, le compte est remis à 0');
     } else {
-      this.toggleSnackbar('Vous n\'êtes pas adulte, le compte est maintenu');
+      this.toggleSnackbar("Vous n'êtes pas adulte, le compte est maintenu");
     }
   }
 
   private isAdult(value: string): boolean {
-    const today = new Date();
     const birthDate = new Date(value);
-
-    const thisMonth = today.getMonth();
+    const thisMonth = this.today.getMonth();
     const birthMonth = birthDate.getMonth();
-    const thisDay = today.getDate();
-    const birthDay = today.getDate();
+    const thisDay = this.today.getDate();
+    const birthDay = birthDate.getDate();
 
-    let age = today.getFullYear() - birthDate.getFullYear();
+    let age = this.today.getFullYear() - birthDate.getFullYear();
     if (
       thisMonth < birthMonth ||
       (thisMonth === birthMonth && thisDay < birthDay)
-    )
-      age--;
+    ) age--;
 
     return age >= 18;
   }
 
   private toggleSnackbar(message: string): void {
-    this.snackBar.open(
-      message,
-      'Fermer',
-      {
-        duration: 5000,
-        horizontalPosition: 'right'
-      }
-    );
+    this.snackBar.open(message, 'Fermer', {
+      duration: 5000,
+      horizontalPosition: 'right',
+    });
   }
 }

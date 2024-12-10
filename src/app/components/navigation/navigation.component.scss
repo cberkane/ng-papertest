@@ -23,10 +23,11 @@
         li {
             cursor: pointer;
             width: 45px;
+            padding: 4px 0;
             text-align: center;
             &.active {
                 color: $theme-primary;
-                border-bottom: 2px solid $theme-primary;
+                border-bottom: 3px solid $theme-primary;
             }
         }
     }

@@ -25,5 +25,12 @@
                 color: #7b7b7b;
             }
         }
+
+        &.up .hint,
+        &.down .hint {
+            mat-icon {
+                color: $font-primary;
+            }
+        }
     }
 }

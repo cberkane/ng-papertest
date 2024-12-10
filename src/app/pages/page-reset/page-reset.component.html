@@ -7,9 +7,9 @@
         <form class="reset-form" [formGroup]="birthDateForm" (submit)="onSubmit()">
             <mat-form-field>
                 <mat-label>Date de naissance</mat-label>
-                <input matInput formControlName="birthDate" [matDatepicker]="picker"/>
+                <input matInput formControlName="birthDate" [matDatepicker]="picker" [max]="today" />
                 <mat-datepicker-toggle matIconSuffix [for]="picker" [disabled]="countService.count === 0"/>
-                <mat-datepicker #picker/>
+                <mat-datepicker #picker />
             </mat-form-field>
             <button mat-stroked-button [disabled]="!birthDateForm.valid">
                 Valider

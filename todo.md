@@ -10,7 +10,9 @@
 [x] Delete titles
 [x] Deactivate form if count === 0
 [x] Nice to have : add users feedback
-[x] Add info icon to hint to hint
+[x] Add info icon to hint
+[x] Nice to have : Improve navbar transition
+[x] Clear form after reset
 [] Have state derived from observables
 [] Add window titles
 [] Add documentation whenever it is needed
@@ -19,4 +21,5 @@
 [] Nice to have : improve imports if needed + add import alias
 [] Nice to have : Sort component decorators
 [] Nice to have : fix paddings
-[] Improve navbar transition
+[] Nice to have : add util functions
+[] Nice to have : fix Input material erroring when unnecessary
