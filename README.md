@@ -17,7 +17,7 @@ Le projet permet d'incrémenter/décrémenter un compteur tout en gardant l'info
 2. Installez les dépendances du projet via npm.
 
    ```bash
-   cd ng-papertest
+   cd ng-technical-test
    npm install
    ```
 
